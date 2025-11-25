@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novidades | GJK CONFECÇÕES</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-banner">
+    <div class="banner-img-wrapper">
+      <img src="img/LOGO.png" alt="Logo GJK CONFECÇÕES" class="banner-logo">
+    </div>
+    <div class="banner-content">
+      <nav id="main-menu" class="main-menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="novidades.html" class="active">Novidades</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <h1 class="banner-title">Novidades da Loja</h1>
+      <p class="banner-subtitle">Confira os lançamentos e tendências em moda e acessórios!</p>
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="novidades-section anim-fadein">
+      <h2>Lançamentos e Tendências</h2>
+      <p>Confira os lançamentos exclusivos, use filtros, busque e avalie seus favoritos!</p>
+    </section>
+
+    <!-- Filtros e busca -->
+    <section class="catalog-filters">
+      <input type="text" id="search" placeholder="Buscar produto...">
+      <div class="filter-group">
+        <label><input type="checkbox" name="tipo" value="feminina"> Feminina</label>
+        <label><input type="checkbox" name="tipo" value="masculina"> Masculina</label>
+        <label><input type="checkbox" name="tipo" value="acessorio"> Acessórios</label>
+        <label><input type="checkbox" name="cor" value="vermelho"> Vermelho</label>
+        <label><input type="checkbox" name="cor" value="preto"> Preto</label>
+        <label><input type="checkbox" name="cor" value="azul"> Azul</label>
+      </div>
+    </section>
+
+    <!-- Catálogo principal -->
+    <section class="catalog-section anim-fadein" id="catalogo">
+      <div class="produtos-grid">
+        <!-- Exemplo de produto -->
+        <article class="produto-card feminina vermelho" data-nome="Vestido Feminino Estampado" data-cor="vermelho" data-tipo="feminina" data-id="1" data-disponivel="7">
+          <div class="produto-img">
+            <img src="img/vestido_feminino.jpg" alt="Vestido feminino estampado" loading="lazy">
+            <button class="wishlist-btn" title="Favoritar">&#9825;</button>
+            <button class="compare-btn" title="Comparar">&#x1F50D;</button>
+          </div>
+          <div class="produto-desc">
+            <h3>Vestido Feminino Estampado <span class="badge novelty">Novidade</span></h3>
+            <div class="avaliacao">
+              <span class="stars">★★★★☆</span>
+              <span class="review-count">(4)</span>
+            </div>
+            <p>Vestido leve e florido, ideal para momentos especiais.</p>
+            <div class="stock-bar">Apenas <span class="qtd">7</span> disponíveis</div>
+            <button class="notify-btn">Quero ser avisado!</button>
+            <button class="galeria-btn">Ver Galeria</button>
+          </div>
+        </article>
+        <!-- Repita para outros produtos, mude classes, datas e atributos -->
+        <article class="produto-card masculina azul" data-nome="Camisa Social Masculina" data-cor="azul" data-tipo="masculina" data-id="2" data-disponivel="2">
+          <div class="produto-img">
+            <img src="img/camisa_masculina.jpg" alt="Camisa social masculina" loading="lazy">
+            <button class="wishlist-btn" title="Favoritar">&#9825;</button>
+            <button class="compare-btn" title="Comparar">&#x1F50D;</button>
+          </div>
+          <div class="produto-desc">
+            <h3>Camisa Social Masculina <span class="badge best">Mais Vendido</span></h3>
+            <div class="avaliacao">
+              <span class="stars">★★★★★</span>
+              <span class="review-count">(12)</span>
+            </div>
+            <p>Camisa moderna para eventos e trabalho.</p>
+            <div class="stock-bar alert">Apenas <span class="qtd">2</span> disponíveis</div>
+            <button class="notify-btn">Quero ser avisado!</button>
+            <button class="galeria-btn">Ver Galeria</button>
+          </div>
+        </article>
+        <!-- Adicione outros cards com variações de filtro, cor, tipo -->
+      </div>
+    </section>
+
+    <!-- Wishlist -->
+    <aside class="wishlist-panel">
+      <h3>Favoritos <span class="wishlist-count">0</span></h3>
+      <ul class="wishlist-list"></ul>
+    </aside>
+
+    <!-- Comparador -->
+    <aside class="compare-panel">
+      <h3>Comparar Produtos</h3>
+      <div class="compare-list"></div>
+      <button class="close-compare">✕</button>
+    </aside>
+
+    <!-- FAQ expansível -->
+    <section class="faq-section anim-fadein">
+      <h3>Perguntas Frequentes</h3>
+      <div class="faq-item">
+        <button class="faq-question">Como escolher o tamanho ideal?</button>
+        <div class="faq-answer">Veja nossa tabela de medidas ou solicite suporte pelo WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quais as formas de pagamento?</button>
+        <div class="faq-answer">Aceitamos cartão, PIX, dinheiro e transferência.</div>
+      </div>
+      <!-- Adicione outras perguntas -->
+    </section>
+  </div>
+
+  <!-- Galeria Modal -->
+  <div class="galeria-modal" id="galeria-modal" style="display: none;">
+    <span class="close-galeria">&times;</span>
+    <div class="galeria-content"></div>
+  </div>
+
+  <!-- Botão de acessibilidade -->
+  <button id="accessibility-btn" title="Acessibilidade">A+</button>
+
+  <footer class="footer">
+    <!-- ...footer igual já pronto... -->
+  </footer>
+
+  <script src="novidades.js"></script>
+</body>
+</html>
